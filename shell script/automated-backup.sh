@@ -1,6 +1,9 @@
 # MOUNT SERVER
 	osascript -e 'tell app "Finder" to open location "smb://$USER:$PASS@$SERVER"'
 
+# SLEEP - PROVIDES SYSTEM TIME TO MOUNT THE VOLUME
+	sleep 5
+
 # DEFINE ACTIVE PROJECT VARIABLES
 	A_LOG="PATH-TO-A-LOG-DIRECTORY/ACTIVE_SYNC_LOG.txt"
 	A_SOURCE="SOURCE-DIRECTORY"
@@ -34,3 +37,4 @@
 
 # SYSTEM ALERT
 #	osascript -e 'tell app "System Events" to display dialog "Backup Complete"'
+	echo "Backup Complete"
